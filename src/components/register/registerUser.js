@@ -50,7 +50,7 @@ const Register = () => {
                         <div className="row align-items-center mt-4">
                             <div className="col">
                             <input type="text" className="form-control" placeholder="Contact Number" 
-                                {...register("contact", { required: true })}
+                                {...register("contact", { required: true, maxLength:7 })}
                             />
                             </div>
                         </div>

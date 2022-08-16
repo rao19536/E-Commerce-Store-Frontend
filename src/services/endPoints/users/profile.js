@@ -8,6 +8,9 @@ export const profileApi = createApi({
     singleUser: build.query({
       query: () => `singleUser/${id}`,
     }),
+    allUsers: build.query({
+      query: () => `allusers`,
+    }),
     updateProfile: build.mutation({
       query: (payload) => ({
         url: `updateuser/${id}`,
@@ -18,4 +21,4 @@ export const profileApi = createApi({
   }),
 })
 
-export const { useSingleUserQuery, useUpdateProfileMutation } = profileApi
+export const { useSingleUserQuery, useUpdateProfileMutation, useAllUsersQuery } = profileApi

@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-const Cart = (props) => {
+const Product = (props) => {
   const {productImage, rating, category, title} = props
   return (
     <>
@@ -25,4 +25,4 @@ const Cart = (props) => {
     </>
   )
 }
-export default Cart
+export default Product

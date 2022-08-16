@@ -1,6 +1,10 @@
 import React from 'react'
-// import { useGetAllUsersQuery } from '../../services/endPoints/users/cart'
+import { useAllUsersQuery } from '../../services/endPoints/users/profile'
+import { Table } from 'antd'
+import './style.scss'
+
 const Users = () => {
+    const {data, isLoading, isError} = useAllUsersQuery()
     const columns = [
         {
             title: 'Name',
@@ -33,11 +37,26 @@ const Users = () => {
             key: 'city',
         },
     ]
+    const users = data && data.map((value, index) => {
+        return {
+            key: index,
+            name: value.name,
+            education: value.education,
+            contact: value.contact,
+            email: value.email,
+            country: value.country,
+            city: value.city
+        }
+    })
 
   return (
-    <>
-
-    </>
+    <div className='users'>
+        <Table 
+            dataSource={users && users} 
+            columns={columns} 
+            loading={isLoading}
+        />
+    </div>
   )
 }
 

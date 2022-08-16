@@ -1,10 +1,19 @@
-import React from 'react'
-import { Space, Table, Tag } from 'antd'
+import React, {useState} from 'react'
+import { Table } from 'antd'
 
-const Tables = ({data, columns}) => {
+const Tables = (props) => {
+  const {columns, dataSource, isLoading} = props
   return (
     <>
-      <Table columns={columns} dataSource={data} />
+      <div className='container'>
+        <Table 
+          columns={columns} 
+          dataSource={dataSource} 
+          pagination={false}
+          // pagination={pagination}
+          loading={isLoading}
+        />
+      </div>
     </>
   )
 }

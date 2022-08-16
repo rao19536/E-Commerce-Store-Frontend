@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { productApi } from '../services/endPoints/users/cart'
+import { productApi } from '../services/endPoints/products/products'
 import { loginApi } from '../services/endPoints/login'
 import { registerApi } from '../services/endPoints/register'
 import {profileApi} from '../services/endPoints/users/profile'

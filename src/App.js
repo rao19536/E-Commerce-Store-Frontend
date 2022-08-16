@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar/Navbar'
 import Login from './components/login/Login'
 import Register from './components/register/registerUser'
-import CartContainer from './containers/cart/cartContainer'
+import ProductContainer from './containers/products/productContainer'
 import Users from './containers/users/users'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import PrivateRoutes from './private-routes/PrivateRoutes'
@@ -19,7 +19,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route element={<PrivateRoutes />}>
           <Route element={<Navbar />} >
-            <Route path='/' element={<CartContainer />} />
+            <Route path='/' element={<ProductContainer />} />
             <Route path='/users' element={<Users />} />
             <Route path='/profile' element={<ProfileContainer />} />
           </Route>
